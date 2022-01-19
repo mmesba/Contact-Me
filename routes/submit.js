@@ -8,13 +8,12 @@
  
 // Dependencies.
  const express = require('express');
+const formController = require('../Controllers/formController')
 const router = express.Router();
  
  
 // main functions or objects.
- router.post('/', (req, res)=>{
-     res.send('ok')
- })
+ router.post('/', formController)
  
  
  
