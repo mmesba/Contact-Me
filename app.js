@@ -19,7 +19,7 @@ var usersRouter = require('./routes/users');
 const submitRouter = require('./routes/submit')
  
 // Connecting with MongoDB via mongoose
-mongoose.connect(CUSTOMCONNSTR_URI, {
+mongoose.connect(process.env.CUSTOMCONNSTR_URI, {
     useNewUrlParser : true,
     useUnifiedTopology: true
 })
