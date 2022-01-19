@@ -21,7 +21,7 @@
        if (err) {
            res.status(500).send('error  '+err.message) 
          } else {
-            res.render({data: req.body})
+            res.render('success.ejs', {data: req.body})
         }
    })
  }
