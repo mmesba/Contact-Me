@@ -1,0 +1,23 @@
+{
+  "name": "Contact-Me-API",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Contact Me repository is a special repo that is responsible for my portfolio project's API BACKEND.  Response to the user's submission and Storing the user's contact information in the database is the main feature of this project",
+  "main": "app.js", 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmesba/contact-me.git"
+  },
+  "author": "Mohammad Mesbaul Haque <mesbaul333@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  }
+}
