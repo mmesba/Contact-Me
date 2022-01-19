@@ -8,6 +8,7 @@
 
 // Dependencies.
 var express = require('express');
+const mongoose = require('mongoose');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -16,6 +17,16 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const submitRouter = require('./routes/submit')
  
+// Connecting with MongoDB via mongoose
+mongoose.connect(process.env.CUSTOMCONNSTR_URI, {
+    useNewUrlParser : true,
+    useUnifiedTopology: true
+})
+
+.then(()=>console.log('Connected with MongoDB'))
+.catch((err)=>console.log(err))
+
+
 // App object or Module scaffolding.
 var app = express();
 
