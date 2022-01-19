@@ -20,6 +20,9 @@ const submitRouter = require('./routes/submit')
 var app = express();
 
 // main functions or objects.
+// Set view engine
+app.set('view engine', 'ejs');
+
 // Permission to use methods.
 app.use(logger('dev'));
 app.use(express.json());
