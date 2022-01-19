@@ -7,14 +7,16 @@
  */
  
 // Dependencies.
+ const express = require('express');
+const router = express.Router();
  
- 
-// App object or Module scaffolding.
  
 // main functions or objects.
- 
+ router.post('/', (req, res)=>{
+     res.send('ok')
+ })
  
  
  
 // export the module.
- 
+ module.exports = router;
