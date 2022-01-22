@@ -13,8 +13,7 @@
  const awake = {};
 // main functions or objects.
  awake.awake = (link)=>{
-    //  wrap everything in an interval function
-    setInterval(() => {
+ 
     //  Sanity Checking of link
      link = typeof(link) === 'string' && link.trim().length > 0 ? link : false;
      //  Perform https get request
@@ -24,7 +23,6 @@
       }).on('error', (e)=>{
           console.log(e);
       })
-    }, 1000*60*15);
  }
  
 // export the module.

@@ -51,7 +51,10 @@ app.use('/users', usersRouter);
 app.use('/submit', submitRouter);
  
 // Using awake module in app js.
-awake.awake('http://mesba.azurewebsites.net')
+    //  wrap everything in an interval function so it can request subsequently
+setInterval(() => {
+    awake.awake('http://mesba.azurewebsites.net')    
+}, 1000*60*15);
 
 
 // Random endpoints redirect to main site
