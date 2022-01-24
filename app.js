@@ -53,7 +53,7 @@ app.use('/submit', submitRouter);
 // Using awake module in app js.
     //  wrap everything in an interval function so it can request subsequently
 setInterval(() => {
-    awake.awake('https://mesba.azurewebsites.net')    
+    awake.awake()    
 }, 1000*60*15);
 
 

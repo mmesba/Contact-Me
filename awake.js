@@ -12,13 +12,12 @@
 // App object or Module scaffolding.
  const awake = {};
 // main functions or objects.
- awake.awake = (link)=>{
- 
-    //  Sanity Checking of link
-     link = typeof(link) === 'string' && link.trim().length > 0 ? link : false;
+awake.link = 'https://mesba.azurewebsites.net/'
+ awake.awake = ()=>{
+
      //  Perform https get request
-      https.get(link, (res)=>{
-          console.log(`Requesting: ${link} `);
+      https.get(awake.link, (res)=>{
+          console.log(`Requesting: ${awake.link} `);
           console.log(`Status Code:  \x1b[31m${res.statusCode}\x1b[0m`);
       }).on('error', (e)=>{
           console.log(e);
